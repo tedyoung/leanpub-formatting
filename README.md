@@ -1,7 +1,7 @@
 Leanpub Formatting Samples
-==================
+==========================
 
-Samples of frequently-asked-about ways to format text and code for Leanpub.
+Samples of frequently-asked-about ways to format text and code for Leanpub. The published book can be found [here](https://leanpub.com/guide-to-leanpub-formatting).
 
 Pull-requests accepted!
 
