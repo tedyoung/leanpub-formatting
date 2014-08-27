@@ -1,11 +1,19 @@
-﻿# Section-level attributes
+﻿# Chapter 3: Section-level attributes
 
-Turned line-numbering off with {line-numbers=off}...
+Turned line-numbering off for an entire section using the "Attributes" feature, this is using: `{line-numbers=off}`...
 
 {line-numbers=off}
 
+Now some code blocks that should *not* have any line-numbering.
+
+E>## Note
+E>
+E>As of August 27, 2014, this is not working, despite it being documented in the [Leanpub Manual](https://leanpub.com/help/manual#leanpub-auto-attributes).
+
 {lang=bash}
     $ sudo wget -qO- https://example.com/gpg | apt-key add -
+
+and
 
 {lang=java}
 ~~~
@@ -17,7 +25,7 @@ Turned line-numbering off with {line-numbers=off}...
   }
 ~~~
 
-No lang...
+Now some code blocks without the `{lang=xyz}` tag:
 
 ~~~
 [
@@ -28,7 +36,9 @@ No lang...
 ]
 ~~~
 
-With lang=js:
+{pagebreak}
+
+This block has `{lang=js}`:
 
 {lang=js}
 ~~~
@@ -40,7 +50,7 @@ With lang=js:
 ]
 ~~~
 
-With lang=text:
+With `{lang=text}` (turns off all coloring/formatting):
 
 {lang=text}
 ~~~
@@ -52,13 +62,16 @@ With lang=text:
 ]
 ~~~
 
-
-Turned line-numbering on with {line-numbers=on}...
+With line-numbering turned back on with `{line-numbers=on}` as a stand-alone attribute...
 
 {line-numbers=on}
 
+Here are some code blocks that should have line numbers.
+
 {lang=bash}
     $ sudo wget -qO- https://example.com/gpg | apt-key add -
+
+and
 
 {lang=java}
 ~~~
@@ -70,10 +83,12 @@ Turned line-numbering on with {line-numbers=on}...
   }
 ~~~
 
-Using line-numbers attribute per code block...
+Using `line-numbers=off` attribute per code block...
 
 {lang=bash,line-numbers=off}
     $ sudo wget -qO- https://example.com/gpg | apt-key add -
+
+and
 
 {lang=java,line-numbers=off}
 ~~~
@@ -86,7 +101,7 @@ Using line-numbers attribute per code block...
 ~~~
 
 
-# Ordered & unordered lists with code
+# Chapter 4: Ordered & unordered lists with code
 
 See [my blog](http://jitterted.com/blog) for more information about this. 
 

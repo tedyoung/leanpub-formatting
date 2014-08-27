@@ -1,4 +1,4 @@
-﻿# Chapter: Asides
+﻿# Chapter 1: Asides
 
 A> ###Aside
 A> A normal `A>` aside.
@@ -58,9 +58,14 @@ End of Indented Plain Asides.
 
 ## Some centering
 
+Using this text:
+
+{lang=text,linenos=off}
 ~~~
 A> C> Centered inside an aside
 ~~~
+
+we get:
 
 A> C> Centered inside an aside
 
