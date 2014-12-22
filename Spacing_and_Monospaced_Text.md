@@ -120,19 +120,124 @@ $ rackup -h
 
 {pagebreak}
 
-## Forcing text to start on a new line
+## Backtick shortcut
+
+You can also use the backtick markup, e.g., this:
+
+{line-numbers=off,lang=text}
+~~~~
+```console
+$ sudo ls -alFh | grep G | sort
+
+total 28
+drwxrwxr-x 5 tom tom 4096 Sep 17 18:22 .
+drwxr-xr-x 3 tom tom 4096 Aug 19 23:02 ..
+drwxrwxr-x 8 tom tom 4096 Sep 17 18:22 .git
+-rw-rw-r-- 1 tom tom  142 Aug 20 23:49 LICENSE.md
+drwxrwxr-x 4 tom tom 4096 Sep 17 18:22 manuscript
+-rw-rw-r-- 1 tom tom  956 Aug 20 23:56 README.md
+drwxrwxr-x 2 tom tom 4096 Sep  8 20:00 user-stories
+```
+~~~~
+
+### Produces:
+
+```console
+$ sudo ls -alFh | grep G | sort
+
+total 28
+drwxrwxr-x 5 tom tom 4096 Sep 17 18:22 .
+drwxr-xr-x 3 tom tom 4096 Aug 19 23:02 ..
+drwxrwxr-x 8 tom tom 4096 Sep 17 18:22 .git
+-rw-rw-r-- 1 tom tom  142 Aug 20 23:49 LICENSE.md
+drwxrwxr-x 4 tom tom 4096 Sep 17 18:22 manuscript
+-rw-rw-r-- 1 tom tom  956 Aug 20 23:56 README.md
+drwxrwxr-x 2 tom tom 4096 Sep  8 20:00 user-stories
+```
+
+{pagebreak}
+
+## Forcing text to start on a new line (line breaks)
+
+Normally multiple lines of text are treated as one long line, but sometimes
+you want an explicit line break, without starting a new paragraph (i.e., inserting
+a blank line). There are two ways to do this, with the double-backslash method
+being preferred over the double-space method as it's easier to see and won't
+accidentally get deleted during reformatting as spaces can (hat tip to Jay Fields for that).
+
+### Use case
+
+Formatting an address using blank lines (to create new paragraphs) like this:
+
+```text
+First M. Last
+
+123 Some Street
+
+Cityname, ST 00000-1234
+```
+
+would look like:
+
+
+First M. Last
+
+123 Some Street
+
+Cityname, ST 00000-1234
+
+
+However, with forced line breaks, it would look like:
+
+First M. Last \\
+123 Some Street \\
+Cityname, ST 00000-1234
+
+Which is nicer.
+
+### Using two backslashes at the end of a line:
+
+```text
+This is the first line.\\
+This is the second line.
+```
+
+#### Produces:
+
+This is the first line.\\
+This is the second line.
+
+
 
 ### Using two spaces at the end of a line:
 
 ~~~
 This is the first line.∙∙
-This is the second sentence.
+This is the second line.
 ~~~
 
 A> Note that the boxes indicate space characters, i.e., you'll need *two* spaces at the end of the line where you want to force a line-break.
 
-### Produces:
+#### Produces:
 
 This is the first line.  
-This is the second sentence.
+This is the second line.
 
+{pagebreak}
+
+### Multi-line code/monospaced text in an aside
+
+#### This content:
+
+{line-numbers=off,lang=text}
+```
+A>`git fetch origin master`  
+A>`git reset –-hard origin/master`  
+A>`git pull origin master`  
+```
+
+#### Produces
+
+A>`git fetch origin master`  
+A>`git reset –-hard origin/master`  
+A>`git pull origin master`  
