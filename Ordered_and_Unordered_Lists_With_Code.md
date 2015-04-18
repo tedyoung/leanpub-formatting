@@ -1,4 +1,4 @@
-﻿# Chapter 3: Section-level attributes
+# Chapter 3: Section-level attributes
 
 Turned line-numbering off for an entire section using the "Attributes" feature, this is using: `{line-numbers=off}`...
 
@@ -170,7 +170,7 @@ G>
 G> 1. First numbered item (1)
 G> 1. Second numbered item (2)
 G>
-G>    <<[Code inside the aside for item #2](code/aside-code-item.js)
+G>    <<[Code inside the aside for item #2](aside-code-item.js)
 G>  
 G>    Text that explains the code above (indented 3 spaces to line up with the `S` in the word Second in the second item above).
 G>

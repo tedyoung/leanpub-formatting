@@ -2,7 +2,7 @@
 
 This chapter covers all things about spacing (both individual spaces and space between lines and paragraphs).
 
-> The examples here are formatted such that the actual text that Leanpub will format is first in monospace and the results are formatted by Leanpub, i.e., if you copied the monospaced text and pasted it into a Leanpub file, you'd see the text under "Produces:".
+A> The examples here are formatted such that the actual text that Leanpub will format is first in monospace and the results are formatted by Leanpub, i.e., if you copied the monospaced text and pasted it into a Leanpub file, you'd see the text under "Produces:".
 
 ## Embedded spaces
 
@@ -154,6 +154,7 @@ drwxrwxr-x 2 tom tom 4096 Sep  8 20:00 user-stories
 
 ### Produces:
 
+{line-numbers=off}
 ```console
 $ sudo ls -alFh | grep G | sort
 
@@ -169,10 +170,11 @@ drwxrwxr-x 2 tom tom 4096 Sep  8 20:00 user-stories
 
 {pagebreak}
 
-## Forcing text to start on a new line (line breaks)
+## Forcing text to start on a new line
 
 Having text start on a new line requires that you either start a new paragraph, like this:
 
+{line-numbers=off,lang=text}
 ~~~~
 First paragraph
 here, even
@@ -183,16 +185,15 @@ paragraph.
 
 Second paragraph is here.
 
->This applied to asides as well
->because this is still the first
->paragraph in
->the
->aside
-> 
->And now this is the second
->paragraph
->in
->the aside.
+A>This applies to asides as well
+A>because this is still the first
+A>paragraph in
+A>the
+A>aside
+A> 
+A>And now this is the second
+A>paragraph in
+A>the aside.
 ~~~~
 
 ### Produces
@@ -206,18 +207,17 @@ paragraph.
 
 Second paragraph is here.
 
->This applied to asides as well
->because this is still the first
->paragraph in
->the
->aside
-> 
->And now this is the second
->paragraph
->in
->the aside.
+A>This applies to asides as well
+A>because this is still the first
+A>paragraph in
+A>the
+A>aside
+A> 
+A>And now this is the second
+A>paragraph in
+A>the aside.
 
-### Line breaks
+## Using Line Breaks
 
 Normally multiple lines of text are treated as one long line, but sometimes
 you want an explicit line break, without starting a new paragraph (i.e., inserting
@@ -229,6 +229,7 @@ accidentally get deleted during reformatting as spaces can (hat tip to Jay Field
 
 Formatting an address using blank lines (to create new paragraphs) like this:
 
+{line-numbers=off,lang=text}
 ```text
 First M. Last
 
@@ -237,7 +238,9 @@ First M. Last
 Cityname, ST 00000-1234
 ```
 
+
 would look like:
+
 
 
 First M. Last
@@ -247,16 +250,21 @@ First M. Last
 Cityname, ST 00000-1234
 
 
-However, with forced line breaks, it would look like:
+
+However, with _forced_ line breaks, it would look like:
+
 
 First M. Last \\
 123 Some Street \\
 Cityname, ST 00000-1234
 
+
 Which is nicer if you don't want the space around the lines that paragraphs give you.
 
-### Using two backslashes at the end of a line:
 
+### Solution 1: Use two backslashes at the end of a line:
+
+{line-numbers=off,lang=text}
 ```text
 This is the first line.\\
 This is the second line.
@@ -267,10 +275,11 @@ This is the second line.
 This is the first line.\\
 This is the second line.
 
+{pagebreak}
 
+### Solution 2: Use two spaces at the end of a line:
 
-### Using two spaces at the end of a line:
-
+{line-numbers=off,lang=text}
 ~~~
 This is the first line.∙∙
 This is the second line.
