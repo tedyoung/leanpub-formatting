@@ -8,7 +8,9 @@ A>The examples here are mainly focused on how the PDF output looks, since that's
 
 ## Github repository
 
-The Github repository that has the source text for this book can be foud [here](https://github.com/tedyoung/leanpub-formatting). If you have any corrections or additions, feel free to create a Pull Request.
+The Github repository that has the source text for this book can be found [here](https://github.com/tedyoung/leanpub-formatting). If you have any corrections or additions, feel free to create a Pull Request.
+
+A> Note that there may be a short (~1 day) delay between publishing a new version and uploading those changes to the Github repository.
 
 ## License
 

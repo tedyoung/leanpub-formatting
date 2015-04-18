@@ -1,8 +1,12 @@
-﻿# Chapter 2: Spacing and Monospaced Text
+# Chapter 2: Spacing and Monospaced Text
 
-The examples here are formatted such that the actual text that Leanpub will format is first in monospace and the results are formatted by Leanpub, i.e., if you copied the monospaced text and pasted it into a Leanpub file, you'd see the text under "Produces:".
+This chapter covers all things about spacing (both individual spaces and space between lines and paragraphs).
+
+> The examples here are formatted such that the actual text that Leanpub will format is first in monospace and the results are formatted by Leanpub, i.e., if you copied the monospaced text and pasted it into a Leanpub file, you'd see the text under "Produces:".
 
 ## Embedded spaces
+
+Here we'll look at different ways to embed individual spaces in different places.
 
 ### Using normal spaces:
 
@@ -78,7 +82,11 @@ The above doesn't work as the `nbsp` remains uninterpreted. Strangely enough the
 
 {pagebreak}
 
-## Fencing for monospaced plain text:
+## Monospaced plain text:
+
+Some ways to create mono-spaced plain text
+
+### Using "Fencing"
 
 {line-numbers=off,lang=text}
 ~~~
@@ -87,13 +95,13 @@ a monospace text
     a third line of text
 ~~~
 
-## Using 4-space indents for pre-formatted text:
+### Using 4-space indents for pre-formatted text:
 
     a monospace text
     another text
     another text
 
-### Notes:
+#### Notes:
 
 Since fencing isn't used, the book's defaults for line-numbering (in this case "on") applies.
 
@@ -117,6 +125,10 @@ $ rackup -h
 # leanpub-end-insert
   Usage: rackup [ruby options] [rack options] [rackup config]
 ~~~~
+
+Where the first line is slightly bolder than the second line.
+
+A> Note: as of March 8, 2015, the boldness is not very visible at 100% zoom in the PDF. 125% zoom makes it noticeable.
 
 {pagebreak}
 
@@ -159,6 +171,54 @@ drwxrwxr-x 2 tom tom 4096 Sep  8 20:00 user-stories
 
 ## Forcing text to start on a new line (line breaks)
 
+Having text start on a new line requires that you either start a new paragraph, like this:
+
+~~~~
+First paragraph
+here, even
+though each line
+is really short
+it's still the first
+paragraph.
+
+Second paragraph is here.
+
+>This applied to asides as well
+>because this is still the first
+>paragraph in
+>the
+>aside
+> 
+>And now this is the second
+>paragraph
+>in
+>the aside.
+~~~~
+
+### Produces
+
+First paragraph
+here, even
+though each line
+is really short
+it's still the first
+paragraph.
+
+Second paragraph is here.
+
+>This applied to asides as well
+>because this is still the first
+>paragraph in
+>the
+>aside
+> 
+>And now this is the second
+>paragraph
+>in
+>the aside.
+
+### Line breaks
+
 Normally multiple lines of text are treated as one long line, but sometimes
 you want an explicit line break, without starting a new paragraph (i.e., inserting
 a blank line). There are two ways to do this, with the double-backslash method
@@ -193,7 +253,7 @@ First M. Last \\
 123 Some Street \\
 Cityname, ST 00000-1234
 
-Which is nicer.
+Which is nicer if you don't want the space around the lines that paragraphs give you.
 
 ### Using two backslashes at the end of a line:
 
@@ -241,3 +301,35 @@ A>`git pull origin master`
 A>`git fetch origin master`  
 A>`git reset –-hard origin/master`  
 A>`git pull origin master`  
+
+{pagebreak}
+
+## Right-aligning text
+
+You can indent pretty heavily, using multiple ` > ` characters, like so:
+
+{line-numbers=off,lang=text}
+```
+>>>> This is indented 4 times.
+```
+
+>>>> This is indented 4 times.
+
+You can try putting it in a table, which allows right-aligned cells, but only if you use a separator with a header row (though the header row can be "empty"):
+
+### With a header and separator row
+
+{line-numbers=off,lang=text}
+```
+{width="100%"}
+| |
+|-------:|
+| This text will be aligned against the right boundary of the table, but if there's a lot of text, then it will wrap to the next line while still retaining the right-alignment. |
+```
+
+#### Produces
+
+{width="100%"}
+| |
+|-------:|
+| This text will be aligned against the right boundary of the table, but if there's a lot of text, then it will wrap to the next line while still retaining the right-alignment. |

@@ -3,7 +3,7 @@
 Sometimes you'll want to use characters, such as the hash symbol `#` that have other meanings in Markdown. In most circumstances, putting a backslash before the special character works just fine. Putting the special character inside of a monospaced span, i.e., surrounded by backticks, also generally works. What follows are some special cases where a backslash doesn't work.
 
 
-## Using the hash as the last character in a heading
+## Using the hash (#) as the last character in a heading
 
 If you want a hash character in a heading, normally that works fine, e.g.:
 
@@ -138,3 +138,20 @@ Which produces:
 ### Conclusion
 
 So there you have it, four solutions to the problem. It's unfortunate that it takes a deeper understanding of how the Markdown syntax is parsed to workaround these issues, but there's usually a solution if you try enough different things.
+
+{pagebreak}
+
+## Dashes: en and em
+
+To produce an "en-dash" (i.e., a dash that's as wide as the letter "N"), you put two dashes in a row. For a wider "em-dash" ("M" is wider than "N"), you put three dashes in a row. For example:
+
+{lang=text,linenos=off}
+~~~
+This text has two dashes -- separating this phrase -- in it to produce an
+"en-dash", but has three --- three! --- dashes here to create an "em-dash".
+~~~
+
+### Produces:
+
+This text has two dashes -- separating this phrase -- in it to produce an
+"en-dash", but has three --- three! --- dashes here to create an "em-dash".

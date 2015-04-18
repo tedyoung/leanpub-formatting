@@ -112,7 +112,7 @@ See [my blog](http://jitterted.com/blog) for more information about this.
    code, code, "code" and { code }
    Some other stuff that's code
    ~~~
-   Stuff that belongs to list item #1, but is not code. Note the lack of syntax highlighting for the above code (lang=text).
+   Text that belongs to list item #1, but is not code. Note the lack of syntax highlighting for the above code (lang=text).
 
 2. Ice makers have had the show, but not on the truck. Furthermore, the memorial home has been parked for days.
 
@@ -120,7 +120,7 @@ See [my blog](http://jitterted.com/blog) for more information about this.
 
    This is the third paragraph for point #2. I've clearly gone on for too long on this one.
 
-3. That's all folks.
+3. Penultimate list item.
 
 3. Oh and remember, the numbers used in ordered lists doesn't matter. I could have used `1.` for each item.
 
@@ -160,4 +160,40 @@ Correct way to do indents with oddly spaced lists:
 
      To have this paragraph be connected to the first bullet, you need to line up this new paragraph line with the above, two spaces here won't work, you'll need five. And it MUST have a blank line above it (though a blank line below is optional, because the asterisk at the beginning of the next line will tell the parser that it's another item).
 *    This second bullet also has the same number of additional spaces before the first non-space character.
+
+### Putting it all aside
+
+Let's put some of the above in an aside:
+
+G> ### A 'G' Aside
+G>
+G> 1. First numbered item (1)
+G> 1. Second numbered item (2)
+G>
+G>    <<[Code inside the aside for item #2](code/aside-code-item.js)
+G>  
+G>    Text that explains the code above (indented 3 spaces to line up with the `S` in the word Second in the second item above).
+G>
+G> 1. Continuation of numbered items (3)
+
+Again, the key here is to ensure that everything is indented appropriately: text that lines up with an item are considered part of that item.
+
+{pagebreak}
+
+## Formatting included code
+
+The section format instructions (e.g., `{line-numbers=off,lang=text}`) can also 
+be applied to included sections of code, i.e., external files that are included
+using the `<<(filename)` syntax. For example, this:
+
+{line-numbers=off,lang=text}
+~~~
+{line-numbers=off,lang=text}
+<<(javascript/Gruntfile.js)
+~~~
+
+### Produces:
+
+{line-numbers=off,lang=text}
+<<(Gruntfile.js)
 
